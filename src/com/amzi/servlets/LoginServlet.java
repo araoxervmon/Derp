@@ -45,7 +45,6 @@ public class LoginServlet extends HttpServlet {
 			    //ToDo a proper redirect
 			}    
 			else{    
-			    out.print("<p style=\"color:red\">Sorry we had some issue come back later</p>");    
 			    RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");    
 			   rd.include(request,response);    
 			}    
@@ -76,7 +75,6 @@ public class LoginServlet extends HttpServlet {
             rd.forward(request, (ServletResponse) request);
         }    
         else{    
-            out.print("<p style=\"color:red\">Sorry username or password error</p>");    
             RequestDispatcher rd=request.getRequestDispatcher("index.jsp");    
             rd.include(request,response);    
         } 

@@ -16,25 +16,25 @@
 	function validateUsername(){
 		var text = document.getElementById("username").value;
 		if(text == ""){
-			document.getElementById("errorusername").innerHTML = "Username is required";
+			document.getElementById("errorusername").innerHTML = "Required";
 			document.getElementById("errorusername").style.color = "red";
 	
 		}
 		else
 		{
-			document.getElementById("errorusername").innerHTML = "OK";
+			document.getElementById("errorusername").innerHTML = "Woohoo";
 			document.getElementById("errorusername").style.color = "green";
 		}
 	}
 	function validatePassword(){
 		var text = document.getElementById("password").value;
 		if(text == ""){
-			document.getElementById("errorpassword").innerHTML = "Password is required";
+			document.getElementById("errorpassword").innerHTML = "Required";
 			document.getElementById("errorpassword").style.color = "red";
 		
 		}
 		else{
-			document.getElementById("errorpassword").innerHTML = "OK";
+			document.getElementById("errorpassword").innerHTML = "Woohoo";
 			document.getElementById("errorpassword").style.color = "green";
 		}
 	}
@@ -81,13 +81,18 @@ left:35%;}
 <div id="centerDiv" class="container">
  <form action="loginServlet" method="post" class="form-signin">  
         <center><legend> Login to Derp </legend> 
-        			<label>User Name</label>
+        <div class="control-group">
+        			<label class="control-label" for="inputname">User Name</label>
+        			<div class="controls">
             		<input type="text" class="input-block-level" placeholder="User Name" name="username" id="username" required="required" onblur="validateUsername();"/></td>
                     <label id="errorusername"></label>
+                    </div>
+                    <div class="controls">
         			<label>Password</label>
                 	<input type="password" class="input-block-level" placeholder="Password" name="userpass" id="password"  required="required" onblur="validatePassword();"/></td>  
                     <label id="errorpassword"></label>
-                    
+                    </div>
+        </div>            
                      <button class="btn btn-large btn-primary" type="submit" value="reset">RESET</button>
                     <button class="btn btn-large btn-primary" type="submit" value="Login">LOGIN</button>
                  

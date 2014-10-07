@@ -53,7 +53,6 @@ public class DeleteServlet extends HttpServlet {
 			    //ToDo a proper redirect
 			}    
 			else{    
-			    out.print("<p style=\"color:red\">Sorry we had some issue come back later</p>");    
 			    RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");    
 			   rd.include(request,response);    
 			}    

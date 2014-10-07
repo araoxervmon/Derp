@@ -46,8 +46,7 @@ public class RegistrationServlet extends HttpServlet {
 		            rd.forward(request,response);    
 		        }    
 		        else{    
-		            out.print("<p style=\"color:red\">Sorry we had some issue come back later</p>");    
-		            RequestDispatcher rd=request.getRequestDispatcher("index.jsp");    
+		           RequestDispatcher rd=request.getRequestDispatcher("index.jsp");    
 		            rd.include(request,response);    
 		        }    
 		  
