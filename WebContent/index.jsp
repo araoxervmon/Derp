@@ -93,8 +93,8 @@ left:35%;}
                     <label id="errorpassword"></label>
                     </div>
         </div>            
-                     <button class="btn btn-large btn-primary" type="submit" value="reset">RESET</button>
-                    <button class="btn btn-large btn-primary" type="submit" value="Login">LOGIN</button>
+                   <!--    <button class="btn btn-large btn-primary" type="submit" value="reset">RESET</button>-->
+                    <button class="btn btn-info pull-left" type="submit" value="Login">LOGIN</button>
                  
                 
                 	<a href="registration.jsp">Signup here</a>

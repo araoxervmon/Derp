@@ -56,7 +56,7 @@ function inviteUser(){
    	 <form action="loginServlet" method="post" name="form">  
      <table class="table table-bordered">
 	   <tr>
-	      <th colspan="5"><br><h3>Contact Table</h3>
+	      <th colspan="5"><br><h3 align="center">Contact Table</h3>
 	      </th>
 	   </tr>
 	  <tr>

@@ -14,10 +14,7 @@
         <form method="post" action="addcontactServlet">
             <center>
             <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2">Add your Friend info here</th>
-                    </tr>
+                <thead><h3 align="center">Add Your Friend Info Here</h3>
                 </thead>
                 <tbody>
                     <tr>
