@@ -47,7 +47,6 @@ public class AddContactServlet extends HttpServlet {
 			if(AddContactDao.addContact(n, e, d)){    
 			    RequestDispatcher rd=request.getRequestDispatcher("success.jsp");    
 			    rd.forward(request,response);  
-			    //ToDo a proper redirect
 			}    
 			else{    
 			   RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");    

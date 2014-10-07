@@ -61,8 +61,8 @@ public class InviteEmailServlet extends HttpServlet {
             transport.connect(host,fromemail);
             transport.send(message);
             transport.close();
-            
-            System.out.println("EMail Sent Successfully!!");
+
+            response.sendRedirect(response.encodeRedirectURL("email.jsp"));
         } catch (MessagingException e) {
             e.printStackTrace();
         }

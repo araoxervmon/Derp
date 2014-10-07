@@ -2,6 +2,7 @@ package com.amzi.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,6 +36,8 @@ public class InviteUserServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		PrintWriter out = response.getWriter();  
 		String userEmail=request.getParameter("userEmail");
 		String fromemail = "test@gmail.com";
 		String host = "localhost";
@@ -59,8 +62,8 @@ public class InviteUserServlet extends HttpServlet {
             transport.connect(host,fromemail);
             transport.send(message);
             transport.close();
-            
-            System.out.println("EMail Sent Successfully!!");
+
+            response.sendRedirect(response.encodeRedirectURL("email.jsp"));
         } catch (MessagingException e) {
             e.printStackTrace();
         }
