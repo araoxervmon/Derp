@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login Application</title>  
 </head>
@@ -43,32 +47,54 @@ height:30%;
 position:absolute;
 top:30%;
 left:35%;}
+ body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
 </style>
-<div id="centerDiv" class="centerDiv">
- <form action="loginServlet" method="post">  
-        <fieldset style="width: 300px">  
+<div id="centerDiv" class="container">
+ <form action="loginServlet" method="post" class="form-signin">  
         <center><legend> Login to Derp </legend> 
-            <table>  
-                <tr>  
-                    <td>Username</td>  
-                    <td><input type="text" name="username" id="username" required="required" onblur="validateUsername();"/></td>
-                    <td><label id="errorusername"></label></td>  
-                </tr>  
-                <tr>  
-                    <td>Password</td>  
-                    <td><input type="password" name="userpass" id="password"  required="required" onblur="validatePassword();"/></td>  
-                    <td><label id="errorpassword"></label></td>
-                </tr>  
-                <tr>  
-                    <td><input type="submit" value="Login" /></td>  
-                    <td><input type="reset" value="Reset" /></td>
-                </tr>  
-                <tr>
-                	<td colspan="2">Not Registered!! <a href="registration.jsp">Register Here</a></td>
-                </tr>
-            </table>  
+        			<label>User Name</label>
+            		<input type="text" class="input-block-level" placeholder="User Name" name="username" id="username" required="required" onblur="validateUsername();"/></td>
+                    <label id="errorusername"></label>
+        			<label>Password</label>
+                	<input type="password" class="input-block-level" placeholder="Password" name="userpass" id="password"  required="required" onblur="validatePassword();"/></td>  
+                    <label id="errorpassword"></label>
+                    
+                     <button class="btn btn-large btn-primary" type="submit" value="reset">RESET</button>
+                    <button class="btn btn-large btn-primary" type="submit" value="Login">LOGIN</button>
+                 
+                
+                	<a href="registration.jsp">Signup here</a>
+               
         </center>    
-        </fieldset>  
     </form> 
     </div> 
 </body>
