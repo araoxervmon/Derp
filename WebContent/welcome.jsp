@@ -35,11 +35,17 @@ function deleteUser(id){
 
 function sendDerp(emailID){
 	console.log(emailID);
+	input_box = confirm("Are you sure you want to Derp?"+emailID);
+	if (input_box == true) {
 	var f=document.form;
 	f.method="post";
 	f.action='inviteemailServlet?emailID='+emailID;
 	f.submit();
 	$('#' + emailID).remove();
+	} else {
+		// Output when Cancel is clicked
+		return false;
+	}
 } 
 
 function inviteUser(){
@@ -52,7 +58,7 @@ function inviteUser(){
 } 
 </script>
     <h2 align="center">Welcome back  <%=session.getAttribute("name")%></h2> 
-    <a href="addcontact.jsp"> <input class="btn btn-large btn-primary" type="submit" value="Add User" name="addUser" id="addUser" /></a> <br/>
+    <a href="addcontact.jsp"> <input class="btn btn-large btn-primary" type="submit" value="Add Friend" name="addUser" id="addUser" /></a> <br/>
    	 <form action="loginServlet" method="post" name="form">  
      <table class="table table-bordered">
 	   <tr>

@@ -52,9 +52,9 @@ public class InviteEmailServlet extends HttpServlet {
             message.setFrom(new InternetAddress(fromemail)); // set required email address 
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(emailID)); // set required email address 
 
-            message.setSubject("Test email");
+            message.setSubject("Derp");
 
-            message.setText("This is the actual message");
+            message.setText("You have been Derped by"+fromemail);
 
           //  Transport.send(message);
             Transport transport = session.getTransport("smtp");

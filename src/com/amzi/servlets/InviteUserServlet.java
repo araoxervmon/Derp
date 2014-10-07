@@ -53,9 +53,9 @@ public class InviteUserServlet extends HttpServlet {
             message.setFrom(new InternetAddress(fromemail)); // set required email address 
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(userEmail)); // set required email address 
 
-            message.setSubject("Test email");
+            message.setSubject("Derp Join Request");
 
-            message.setText("This is the actual message");
+            message.setText("You have received Derp request from"+fromemail);
 
           //  Transport.send(message);
             Transport transport = session.getTransport("smtp");

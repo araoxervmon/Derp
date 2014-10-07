@@ -59,7 +59,7 @@
                 <div class="form-group">
                     <label for="InputEmail">Password</label>
                     <div class="input-group">
-                        <input type="text" class="form-control"  name="pass" placeholder="Password" required>
+                        <input type="password" class="form-control"  name="pass" placeholder="Password" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                 </div>
